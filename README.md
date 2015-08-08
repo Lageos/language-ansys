@@ -1,6 +1,6 @@
 # language-ansys package
 
-ANSYS apdle language support for ATOM.
+ANSYS apdl language support for ATOM.
 
 Created by porting the Textmate ANSYS-Textmate-Bundle (https://github.com/bguest/ANSYS-Textmate-Bundle).
 

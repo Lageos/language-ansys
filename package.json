@@ -4,7 +4,7 @@
   "description": "A port of ANSYS-Textmate-Bundle from bguest https://github.com/bguest/ANSYS-Textmate-Bundle",
   "keywords": ["ansys","language","apdl"
   ],
-  "repository": "https://github.com/atom/language-ansys",
+  "repository": "https://github.com/lageos/language-ansys",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
