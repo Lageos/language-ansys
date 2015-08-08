@@ -1,0 +1,5 @@
+".source.apdl":
+  editor:
+    increaseIndentPattern: "(?i)(\\*if|\\*do|\\*dowhile|\\*else|\\*elseif)"
+    decreaseIndentPattern: "(?i)(\\*endif|\\*enddo|\\*else|\\*elseif)"
+    commentStart: "! "

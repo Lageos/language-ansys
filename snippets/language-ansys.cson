@@ -1,0 +1,215 @@
+".source.apdl":
+  "& Line Break":
+    prefix: "!&"
+    body: '''
+      !&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+      
+    '''
+  "- Line Break":
+    prefix: "!-"
+    body: '''
+      !------------------------------------------------------
+      
+    '''
+  "= Line Break":
+    prefix: "!="
+    body: "!======================================================"
+  AATT:
+    prefix: "aatt"
+    body: "aatt,${1:MAT},${2:REAL},${3:TYPE},${4:ESYS},${5:SECN}"
+  ADELE:
+    prefix: "adel"
+    body: "adele,${1:NA1},${2:NA2},${3:NINC},${4:KSWP}"
+  ADRAG:
+    prefix: "adra"
+    body: "ADRAG,${1:NL1},${2:NL2},${3:NL3},${4:NL4},${5:NL5},${6:NL6},${7:NLP1},${8:NLP2},${9:NLP3},${10:NLP4},${11:NLP5},${12:NLP6}"
+  ASBA:
+    prefix: "asba"
+    body: '''
+      asba,${1:NA1},${2:NA2},${3:SEPO},${4:KEEP1},${5:KEEP2}
+      ${6:!NA1: Area to be subtracted from
+      !NA2: Area to be subtracted
+      !SEPO: (blank) --> Resulting areas share lines where they touch
+      !        SEPO  --> The resulting areas have seperate lines
+      !KEEP1, KEEP2: Specifies whether NA1, NA2 areas are to be deleted: 
+      ! (blank) -—>  Use the setting of KEEP on the BOPTN command.
+      ! DELETE  -—>  Delete NA1 areas after ASBA operation (override BOPTN command settings).
+      !   KEEP  -—>  Keep NA1 areas after ASBA operation (override BOPTN command settings).}
+    '''
+  ATMESH:
+    prefix: "atmesh"
+    body: "atmesh,'${1:kp\\|line\\|area\\|volu}',${2:MatProp},${3:first},${4:last},${5:inc},${6:LineOrient/ShellSecn}"
+  CLOCAL:
+    prefix: "cloc"
+    body: "clocal,${1:New_CS_Number},${2:KCS}, ${3:XL},${4:YL},${5:ZL}, ${6:THXY},${7:THYZ},${8:THZX}, ${9:PAR1},${10:PAR2}"
+  CM:
+    prefix: "cm"
+    body: "cm,${1:Cname},${2:VOLU/AREA/LINE/KP/ELEM/NODE}"
+  CMADD:
+    prefix: "cmadd"
+    body: "cmadd,'${1:volu\\|area\\|line\\|kp\\|elem\\|node}','${2:cm_name}',${3:first},${4:last},${5:increment}"
+  CSKP:
+    prefix: "cskp"
+    body: "cskp,${1:New_CS_Number},${2:KCS},${3:PORIG},${4:PXAXS},${5:PXYPL},${6:PAR1},${7:PAR2}"
+  CirBeam44:
+    prefix: "cirb"
+    body: '''
+      CirBeam44,${1:MatNum},${2:OD},${3:TKWALL},${4:Material}
+      ${0:!Material --> See _MAT.mac}
+    '''
+  D:
+    prefix: "d"
+    body: "d,${1:NODE},${2:Lab},${3:VALUE},${4:VALUE2},${5:NEND},${6:NINC},${7:Lab2},${8:Lab3},${9:Lab4},${10:Lab5},${11:Lab6}"
+  DK:
+    prefix: "dk"
+    body: "dk,${1:KPOI},${2:Lab},${3:VALUE},${4:VALUE2},${5:KEXPND},${6:Lab2},${7:Lab3},${8:Lab4},${9:Lab5},${10:Lab6}"
+  DL:
+    prefix: "dl"
+    body: "dl,${1:LINE},${2:AREA},${3:Lab},${4:Value1},${5:Value2}"
+  do:
+    prefix: "do"
+    body: '''
+      *do,${1:index},${2:start},${3:end},${4:increment}
+         $0
+      *enddo
+    '''
+  "*GET":
+    prefix: "*get"
+    body: "*get,${1:Par},${2:Entity},${3:ENTNUM},${4:Item1},${5:IT1NUM},${6:Item2},${7:IT2NUM}"
+  KBETW:
+    prefix: "kbet"
+    body: "KBETW,${1:KP1},${2:KP2},${3:KPNEW},${4:RATIO/DIST},${5:VALUE}"
+  KGEN:
+    prefix: "kgen"
+    body: '''
+      kgen,${1:ITIME},${2:NP1},${3:NP2},${4:NINC},${5:DX},${6:DY},${7:DZ},${8:KINC},${9:NOELEM},${10:IMOVE}
+      ${0:!IMOVE: 0 --> Generate new keypoints, 1 --> Move keypoints}
+    '''
+  KPRL:
+    prefix: "kprl"
+    body: "kprl,${1:orig_kp},${2:ref_line},${3:new_kp}"
+  LATT:
+    prefix: "latt"
+    body: '''
+      latt,${1:MAT},${2:REAL},${3:TYPE},,${4:KB},${5:KE},${6:SECNUM}
+      ${0:!KB --> Begining Keypoint Orientation
+      !KE --> End Keypoint Orientation}
+    '''
+  LDIV:
+    prefix: "ldiv"
+    body: "ldiv,${1:NL1},${2:RATIO},${3:PDIV},${4:NDIV},${5:KEEP}"
+  LDRAG:
+    prefix: "ldra"
+    body: "ldrag,${1:NK1},${2:NK2},${3:NK3},${4:NK4},${5:NK5},${6:NK6},${7:NL1},${8:NL2},${9:NL3},${10:NL4},${11:NL5},${12:NL6}"
+  LESIZE:
+    prefix: "lesi"
+    body: "lesize,${1:NL1},${2:SIZE},${3:ANGSIZ},${4:NDIV},${5:SPACE},${6:KFORC},${7:LAYER1},${8:LAYER2},${9:KYNDIV}"
+  LGEN:
+    prefix: "lgen"
+    body: '''
+      lgen,${1:ITIME},${2:NP1},${3:NP2},${4:NINC},${5:DX},${6:DY},${7:DZ},${8:KINC},${9:NOELEM},${10:IMOVE}
+      ${0:!IMOVE: 0 --> Generate new keypoints, 1 --> Move keypoints}
+    '''
+  MAT_AL7075:
+    prefix: "mat_al"
+    body: '''
+      !--------Material Definition: Aluminum 7075-T73--------
+      !REF: MIL-HDBK-5E
+      MP,EX,${1:MatNum},10.3e6        
+      MP,PRXY,${1:MatNum},0.33
+      MP,DENS,${1:MatNum},0.1/Gravity
+      MP,ALPX,${1:MatNum},12.4E-6
+      ${2:
+      !----FAILURE CRITERIA (YEILD STRENGTHS)
+      FC,${1:MatNum},S,XTEN,56e3 !Tensile stress, X-direction
+      FC,${1:MatNum},S,YTEN,56e3 !Tensile stress, y-direction
+      FC,${1:MatNum},S,ZTEN,56e3 !Tensile stress, Z-direction 
+      FC,${1:MatNum},S,XY  ,38e3 !XY shear stress(Ultimate Strength)
+      FC,${1:MatNum},S,YZ  ,38e3 !YZ shear stress(Ultimate Strength)
+      FC,${1:MatNum},S,XZ  ,38e3 !XZ shear stress(Ultimate Strength)}
+    '''
+  "MAT_SS15-5PH":
+    prefix: "mat_ss155"
+    body: '''
+      !--Material Definition: STAINLESS_STEEL_15-5PH(H1025)--
+      !REF:MIL-HDBK-5E,PRO_E
+      MP,EX,${1:MatNum},28.5e6
+      MP,PRXY,${1:MatNum},0.27
+      MP,DENS,${1:MatNum},0.283/G
+      MP,ALPX,${1:MatNum},6.3e-6
+    '''
+  "*MSG":
+    prefix: "*msg"
+    body: '''
+      *msg,${1:info/note/warn/error/ui},${2:VAL1},${3:VAL2},${4:VAL3},${5:VAL4},${6:VAL5},${7:VAL6},${8:VAL7},${9:VAL8}
+      	${0:Message Here}
+    '''
+  NUMSTR:
+    prefix: "nums"
+    body: '''
+      numstr,${1:Label},${2:VALUE}
+      ${0:!Label-> NODE, ELEM, KP, LINE, AREA, VOLU, DEFA}
+    '''
+  SqBeam44:
+    prefix: "sqbe"
+    body: '''
+      SqBeam44,${1:MatNum},${2:TKY},${3:TKZ},${4:WallThk},${5:Material}
+      ${0:!Material --> See _MAT.mac}
+    '''
+  TheEnd:
+    prefix: "theend"
+    body: '''
+      !======THE--END========THE--END========THE--END========
+      !ITS THE END OF THE FILE AS WE KNOW IT, AND I FEEL FINE
+    '''
+  "*VGET":
+    prefix: "*vget"
+    body: "${1:ParR} = $ *VGET,${1:ParR},${2:Entity},${3:ENTNUM},${4:Item1},${5:IT1NUM},${6:Item2},${7:IT2NUM},${8:KLOOP}"
+  _LMESH:
+    prefix: "_lmesh"
+    body: "_lmesh,${1:LN},${2:MAT},${3:N_ELM},${4:KP_O}"
+  _SHELL63:
+    prefix: "_shell63"
+    body: '''
+      _shell63,${1:MatNum},${2:Thickness},${3:Material}
+      ${0:!Material (See _MAT.mac)}
+    '''
+  _aatt:
+    prefix: "AATT"
+    body: "aatt,${1:MAT},${1:REAL},${1:TYPE},${2:ESYS},${1:SECN}"
+  _larc:
+    prefix: "_larc"
+    body: "_larc,${1:kp1},${2:kp2},${3:center_kp}"
+  _latt:
+    prefix: "LATT"
+    body: '''
+      latt,${1:MAT},${1:REAL},${1:TYPE},,${2:KB},${3:KE},${4:SECNUM}
+      ${0:!KB --> Begining Keypoint Orientation
+      !KE --> End Keypoint Orientation}
+    '''
+  array:
+    prefix: "array"
+    body: "${1:arrayName} = $ *dim,$1,array,${2:arraySize}"
+  "bldHeader & bldFooter":
+    prefix: "bldh"
+    body: '''
+      bldHeader,'$1'
+      $TM_CURRENT_WORD$0
+      bldFooter,'$1'
+    '''
+  if:
+    prefix: "if"
+    body: '''
+      *if,${1:value 1},${2:GT/GE/LT/LE/EQ/NE)},${3:value3},then
+         $0
+      *endif
+    '''
+  if_else:
+    prefix: "else"
+    body: '''
+      *if,${1:value 1},${2:(LT/GT/EQ/NE...)},${3:value 2},then
+         $4
+      *else
+         $0
+      *endif
+    '''
